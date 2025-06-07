@@ -3,8 +3,8 @@ const puppeteer = require('puppeteer');
 (async () => {
   const browser = await puppeteer.launch({
     headless: true,
-    args: ['--no-sandbox', '--disable-setuid-sandbox'],
-    executablePath: puppeteer.executablePath()
+    args: ['--no-sandbox', '--disable-setuid-sandbox']
+    // No executablePath needed when using full Puppeteer on Render
   });
 
   const page = await browser.newPage();
